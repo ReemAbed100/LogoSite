@@ -22,7 +22,7 @@ const logos = {
   2017: {
     src: "Apple-2017-logo.png",
     description: "The latest design continues Apple's commitment to simplicity and elegance."
-  }
+  },
 };
 
 function changeLogo(year) {
