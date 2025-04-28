@@ -1,0 +1,1 @@
+document.body.innerHTML += "<p>Welcome to my website!</p>";
