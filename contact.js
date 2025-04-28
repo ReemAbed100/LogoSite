@@ -7,6 +7,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var phone = document.getElementById('phone').value.trim();
     var message = document.getElementById('message').value.trim();
     var formMessage = document.getElementById('formMessage');
+    
 
     // Clear previous messages
     formMessage.textContent = '';
