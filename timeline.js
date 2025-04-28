@@ -30,12 +30,20 @@ function changeLogo(year) {
   const desc = document.getElementById("description");
   const yearText = document.getElementById("year");
 
+  // Fade out image first
+  logoImg.style.transition = "opacity 0.5s"; // Make sure fade is smooth
   logoImg.style.opacity = 0;
 
+  // After fade out is done (wait 500ms), change image and fade in
   setTimeout(() => {
     logoImg.src = logos[year].src;
     desc.textContent = logos[year].description;
     yearText.textContent = year;
-    logoImg.style.opacity = 1;
-  }, 300);
+
+    // Small extra wait before fade-in to ensure image is loaded
+    setTimeout(() => {
+      logoImg.style.opacity = 1;
+    }, 50); // small delay for better smoothness
+  }, 500); // match with CSS transition time
 }
+
