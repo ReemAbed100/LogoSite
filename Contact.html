@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<div class="contact-container">
+    
+    <div class="contact-info">
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+                <h3>Address</h3>
+                <p>Saudi Arabia - Tabuk</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+                <h3>Phone</h3>
+                <p>+0098 9893 5647<br>+0098 3434 5678</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+                <h3>Email</h3>
+                <p>hadeel@gmail.com<br>hadeel@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Send us a message</h2>
+        <p>If you have any work for me or any queries, you can send me a message from here.</p>
+    
+        <form id="contactForm">
+    
+    
+            <div class="input-group">
+                <div class="input-item">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-item">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" class="email" placeholder="Email">
+                </div>
+                <div class="input-item">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" class="phone" placeholder="Phone">
+                </div>
+            </div>
+            
+            
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+    
+            <div class="button-group">
+                <button type="submit">Send Now</button>
+                <a href="index.html" class="home-button">Return to Home</a>
+            </div>
+    
+            <!-- Message placeholder -->
+            <div id="formMessage" style="margin-top: 10px; color: green;"></div>
+        </form>
+    </div>
+    
+
+</div>
+
+<script src="js/contact.js"></script>
+
+</body>
+</html>
