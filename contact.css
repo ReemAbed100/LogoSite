@@ -21,7 +21,7 @@ body {
 }
 
 .contact-info {
-    background-color: #6C63FF;
+    background-color: #8A897C;
     color: #fff;
     flex: 1 1 250px;
     padding: 20px;
@@ -50,7 +50,7 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f7f7f7;
+    background-color: #8A897C;
     font-size: 16px;
     box-sizing: border-box;
     transition: border-color 0.3s, background-color 0.3s;
@@ -73,7 +73,6 @@ body {
     font-size: 16px;
 }
 
-/* Input group styling for email and phone fields */
 .contact-form .input-group {
     display: flex;
     justify-content: space-between;
@@ -87,15 +86,15 @@ body {
 }
 
 .contact-form .input-item.name {
-    width: 100%; /* Name input takes full width */
+    width: 100%; 
 }
 
 .contact-form .input-item.email {
-    width: 60%; /* Email input takes 60% width */
+    width: 60%; 
 }
 
 .contact-form .input-item.phone {
-    width: 38%; /* Phone input takes 38% width */
+    width: 38%; 
 }
 
 .contact-form .input-item label {
@@ -123,7 +122,6 @@ body {
     outline: none;
 }
 
-/* Button container */
 .button-group {
     display: flex;
     justify-content: space-between;
@@ -143,16 +141,15 @@ body {
 
 .contact-form button:hover,
 .return-home .home-button:hover {
-    background-color: #5548c8;
+    background-color: #D2D7DF;
 }
 
-/* Responsive Design: Stack input fields on smaller screens */
 @media (max-width: 768px) {
     .contact-form .input-item {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
     }
 
     .contact-form .input-group {
-        flex-direction: column; /* Stack fields vertically */
+        flex-direction: column;
     }
 }
