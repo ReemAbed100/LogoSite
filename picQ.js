@@ -3,40 +3,40 @@ const questions = [
         question: "Guess The Logo?",
         image: "burgerking.png",
         answers: [
-            { text: "1976", correct: true },
-            { text: "1990", correct: false },
-            { text: "2000", correct: false },
-            { text: "1977", correct: false },
+            { text: "Burgerking", correct: true },
+            { text: "Google", correct: false },
+            { text: "Coca Cola", correct: false },
+            { text: "Samsung", correct: false },
         ]
     },
     {
         question: "Guess The Logo?",
         image: "starbucks.png",
         answers: [
-            { text: "1966", correct: false },
-            { text: "1977", correct: false },
-            { text: "1971", correct: true },
-            { text: "1955", correct: false },
+            { text: "Pepsi", correct: false },
+            { text: "Nike", correct: false },
+            { text: "Starbucks", correct: true },
+            { text: "Apple", correct: false },
         ]
     },
     {
         question: "Guess The Logo?",
         image: "nike.png",
         answers: [
-            { text: "1966", correct: false },
-            { text: "1937", correct: false },
-            { text: "1938", correct: true },
-            { text: "1955", correct: false },
+            { text: "Ikea", correct: false },
+            { text: "Ford", correct: false },
+            { text: "Nike", correct: true },
+            { text: "Microsoft", correct: false },
         ]
     },
     {
         question: "Guess The Logo?",
         image: "apple.png",
         answers: [
-            { text: "Blue", correct: false },
-            { text: "Purple", correct: true },
-            { text: "Red", correct: false },
-            { text: "Yellow", correct: false },
+            { text: "Youtube", correct: false },
+            { text: "Apple", correct: true },
+            { text: "Sprite", correct: false },
+            { text: "Visa", correct: false },
         ]
     }
 ];
