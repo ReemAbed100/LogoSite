@@ -18,31 +18,37 @@
       <li><a href="Contact.html">Contact</a></li>
     </ul>
   </nav>
-<section class="hero">
-  <div class="hero-wrapper">
-    <div class="hero-content">
-      <h1>Explore the Evolution of Logos</h1>
-      <p class="hero-sub">A visual journey through iconic brand identities—browse our gallery or test your knowledge with fun quizzes!</p>
-      <div class="hero-ctas">
-        <a href="gallery.html" class="btn">View Gallery</a>
-        <a href="quizzes.html" class="btn">Take a Quiz</a>
-      </div>
-    </div>
-
-<h2 id="form-title">Login</h2>
-<div class="form-toggle">
-  <button id="login-toggle" class="active">Login</button>
-  <button id="register-toggle">Register</button>
+<div class="hero-wrapper">
+  <table class="layout-table">
+    <tr>
+      <td class="hero-cell">
+        <div class="hero">
+          <h1>Welcome to Our Site</h1>
+          <p class="hero-sub">This is a brief introduction.</p>
+          <div class="hero-ctas">
+            <a href="#" class="btn">Learn More</a>
+            <a href="#" class="btn">Get Started</a>
+          </div>
+        </div>
+      </td>
+      <td class="login-cell">
+        <div class="auth-container">
+          <h2>Login</h2>
+          <form class="auth-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+          </form>
+          <div class="form-toggle">
+            <button class="toggle-signup">Sign Up</button>
+            <button class="toggle-forgot">Forgot Password</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>
-<div class="auth-form">
-  <input type="text" id="name-field" placeholder="Name" style="display: none;" />
-  <input type="email" id="email-field" placeholder="Email" />
-  <input type="password" id="password-field" placeholder="Password" />
-  <button id="submit-btn">Submit</button>
-  <p id="form-message"></p>
-</div>
 
-</section>
 
 
   <!-- Preview Section -->
