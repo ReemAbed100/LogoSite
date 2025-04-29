@@ -5,37 +5,58 @@
     <title>quiz</title>
     <link rel="stylesheet" href="qui.css">
     <link rel="stylesheet" href="navbar.css">
-    
+    <style>
+        .gallery-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+        }
+
+        .gallery-item {
+            flex: 0 0 48%;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar" >
+    <nav class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>   
-      </nav>
-    
-  <h1>Select a Company</h1>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-  <div class="gallery-container">
-    <div class="gallery-item">
-      <a href="Q.html">
-        <img src="Questions.png" alt="Questions">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="picQ.html">
-        <img src="Guess The Logo.png" alt="Guess The Logo">
-      </a>
-    </div>
-  </div>
+    <h1 style="text-align: center; margin-top: 40px;">Select a Company</h1>
 
-    </div> -->
-<script src="qw.js"></script>
-</script>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <a href="Q.html">
+                <img src="Questions.png" alt="Questions">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="picQ.html">
+                <img src="Guess The Logo.png" alt="Guess The Logo">
+            </a>
+        </div>
+    </div>
+
+    <script src="qw.js"></script>
 </body>
 
 </html>
