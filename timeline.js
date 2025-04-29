@@ -18,7 +18,7 @@ const logos = {
   },
   2007: {
     src: "Apple-2007-logo.png",
-    description: "ith the launch of the iconic iPhone in 2007, Apple embraced a reflective glass effect in its logo. This sleek, shiny appearance echoed Apple's commitment to creating beautiful and functional products, with the logo symbolizing innovation and cutting-edge technology."
+    description: "With the launch of the iconic iPhone in 2007, Apple embraced a reflective glass effect in its logo. This sleek, shiny appearance echoed Apple's commitment to creating beautiful and functional products, with the logo symbolizing innovation and cutting-edge technology."
   },
   2017: {
     src: "Apple-2017-logo.png",
@@ -38,18 +38,17 @@ function changeLogo(year) {
   const yearText = document.getElementById("year");
 
   // Fade out image first
-  logoImg.style.transition = "opacity 0.5s"; // Make sure fade is smooth
+  logoImg.style.transition = "opacity 0.5s";
   logoImg.style.opacity = 0;
 
-  // After fade out is done (wait 500ms), change image and fade in
+  // After fade out, change image and fade in
   setTimeout(() => {
     logoImg.src = logos[year].src;
     desc.textContent = logos[year].description;
     yearText.textContent = year;
 
-    // Small extra wait before fade-in to ensure image is loaded
     setTimeout(() => {
       logoImg.style.opacity = 1;
-    }, 50); // small delay for better smoothness
-  }, 500); // match with CSS transition time
+    }, 50);
+  }, 500);
 }
