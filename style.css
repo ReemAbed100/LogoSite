@@ -33,13 +33,29 @@ a {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* Layout Table */
+.layout-table {
+  width: 100%;
+  height: 100vh;
+  table-layout: fixed;
+}
+
+.hero-cell {
+  width: 50%;
+  padding: 2rem;
+}
+
+.login-cell {
+  width: 50%;
+  padding: 2rem;
+  vertical-align: top;
+}
+
 .hero {
   background-color: #004e92;
   color: white;
-  text-align: left;
   padding: 4rem 2rem;
-  width: 50%; /* Adjust width to take 50% of the screen */
+  text-align: left;
 }
 
 .hero h1 {
@@ -65,16 +81,7 @@ a {
   background-color: #e0e0e0;
 }
 
-/* Hero Layout Wrapper (with Auth Form) */
-.hero-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  width: 100%;
-  height: 100vh; /* Take full height of the screen */
-}
-
+/* Auth Form Section */
 .auth-container {
   background-color: #ffffff;
   padding: 30px;
@@ -82,7 +89,6 @@ a {
   width: 100%;
   max-width: 360px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  margin: 40px auto;
   transition: box-shadow 0.3s ease;
 }
 
@@ -160,100 +166,23 @@ a {
   margin-top: 10px;
 }
 
-/* Intro Section */
-.intro {
-  text-align: center;
-  padding: 3rem 2rem;
-  background-color: #ffffff;
-}
-
-.intro h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.intro p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
-
-.intro-cta .btn {
-  background-color: #004e92;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  margin: 0.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.intro-cta .btn:hover {
-  background-color: #003366;
-}
-
-/* Preview Section */
-.preview {
-  text-align: center;
-  padding: 3rem 2rem;
-}
-
-.preview h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.preview-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.preview-gallery img {
-  width: 120px;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.preview-gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero-wrapper {
-    flex-direction: column;
-    align-items: center;
-    height: auto; /* Allow for more flexible layout */
+  .layout-table {
+    display: block;
+    height: auto;
+  }
+  .hero-cell,
+  .login-cell {
+    width: 100%;
+    padding: 1rem;
   }
   .hero {
-    width: 100%; /* Full width for smaller screens */
+    width: 100%;
     padding: 3rem 2rem;
   }
   .auth-container {
     width: 80%;
     margin-top: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .hero-sub {
-    font-size: 0.95rem;
-  }
-  .auth-container {
-    width: 90%;
   }
 }
