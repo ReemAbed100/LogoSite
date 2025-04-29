@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Passwords do not match.");
       return;
     }
-
+ 
     console.log(isLogin ? "Logging in..." : "Signing up...");
     console.log("Email:", email);
     console.log("Password:", password);
