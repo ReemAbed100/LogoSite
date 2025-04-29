@@ -1,9 +1,4 @@
-// Preload all logo images
-Object.values(logos).forEach(logo => {
-  const img = new Image();
-  img.src = logo.src;
-});
-
+// Define the logos object first
 const logos = {
   1976: {
     src: "Apple-1976-logo.png",
@@ -31,6 +26,12 @@ const logos = {
   },
 };
 
+// Preload all logo images
+Object.values(logos).forEach(logo => {
+  const img = new Image();
+  img.src = logo.src;
+});
+
 function changeLogo(year) {
   const logoImg = document.getElementById("logo");
   const desc = document.getElementById("description");
@@ -52,4 +53,3 @@ function changeLogo(year) {
     }, 50); // small delay for better smoothness
   }, 500); // match with CSS transition time
 }
-
