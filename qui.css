@@ -94,6 +94,52 @@ btn:disabled{
     cursor: pointer;
     display: block;
 }
+/* Gallery Section */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.gallery-item {
+  width: 150px;  /* Set a default size for each logo */
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;  /* Make the image take up the entire container */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item a {
+  text-decoration: none;
+  color: #1A202C;
+  font-weight: bold;
+  display: block;
+  margin-top: 8px;  /* Space between image and label */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 120px;  /* Adjust logo sizes on mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-item {
+    width: 100px;  /* Further adjust logo sizes for very small screens */
+  }
+}
 
 .correct {
     background-color: #249455;
