@@ -64,7 +64,7 @@ btn:disabled{
     cursor: pointer;
     display: block;
 }
-/* Gallery Section */
+
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
@@ -74,12 +74,12 @@ btn:disabled{
 }
 
 .gallery-item {
-  width: 150px;  /* Set a default size for each logo */
+  width: 150px;
   text-align: center;
 }
 
 .gallery-item img {
-  width: 100%;  /* Make the image take up the entire container */
+  width: 100%;  
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -95,19 +95,19 @@ btn:disabled{
   color: #1A202C;
   font-weight: bold;
   display: block;
-  margin-top: 8px;  /* Space between image and label */
+  margin-top: 8px; 
 }
 
-/* Mobile responsiveness */
+
 @media (max-width: 768px) {
   .gallery-item {
-    width: 120px;  /* Adjust logo sizes on mobile */
+    width: 120px;
   }
 }
 
 @media (max-width: 600px) {
   .gallery-item {
-    width: 100px;  /* Further adjust logo sizes for very small screens */
+    width: 100px; 
   }
 }
 
