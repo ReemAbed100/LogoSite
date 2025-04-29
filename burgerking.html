@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Burger King Logo Timeline</title>
+  <link rel="stylesheet" href="timeline.css">
+</head>
+<body>
+  <div class="timeline-container">
+    <h1>Burger King Logo Timeline</h1>
+
+    <div class="dots">
+        <span class="dot" data-year="1953" onclick="changeLogo(1953)"></span>
+        <span class="dot" data-year="1954" onclick="changeLogo(1954)"></span>
+        <span class="dot" data-year="1957" onclick="changeLogo(1957)"></span>
+        <span class="dot" data-year="1969" onclick="changeLogo(1969)"></span>
+        <span class="dot" data-year="1994" onclick="changeLogo(1994)"></span>
+        <span class="dot" data-year="1999" onclick="changeLogo(1999)"></span>
+        <span class="dot" data-year="2021" onclick="changeLogo(2021)"></span>
+    </div>
+
+    <div class="logos">
+      <div class="logo-box">
+        <p id="year" class="year-label">1953</p>
+        <img id="logo" src="BK-1953-logo.png" alt="Burger King Logo" />
+        <p id="description">The original 1953 logo launched when the company was called "Insta-Burger King." It had a warm, welcoming look that invited diners in with retro charm.</p>
+      </div>
+    </div>
+    
+    <a href="gallery.html">Back to Gallery</a>
+
+    <script src="timeline.js"></script>
+  </div>
+</body>
+</html>
