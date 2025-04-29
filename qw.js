@@ -12,21 +12,21 @@ const questions = [
 
     },
     {
-        question: "When was Nikes famous logo created?",
+        question: "When did Burger King introduce its third logo featuring the ‘King on a Burger’?",
         answers: [
             { text: "1966", correct: false },
             { text: "1977", correct: false },
-            { text: "1971", correct: true },
+            { text: "1957", correct: true },
             { text: "1955", correct: false },
         ]
     },
 
     {
-        question: "When was Samsungs first logo made?",
+        question: "When did Starbucks introduce its most recent logo?",
         answers: [
-            { text: "1966", correct: false },
-            { text: "1937", correct: false },
-            { text: "1938", correct: true },
+            { text: "1968", correct: false },
+            { text: "2001", correct: false },
+            { text: "2011", correct: true },
             { text: "1955", correct: false },
         ]
 
