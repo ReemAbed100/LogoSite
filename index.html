@@ -30,6 +30,27 @@
       </div>
     </div>
   </section>
+<div class="auth-container">
+  <div class="form-toggle">
+    <button onclick="showForm('login')">Login</button>
+    <button onclick="showForm('signup')">Sign Up</button>
+  </div>
+
+  <form id="loginForm" class="auth-form">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username" required>
+    <input type="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <form id="signupForm" class="auth-form" style="display: none;">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Username" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <button type="submit">Sign Up</button>
+  </form>
+</div>
 
   <!-- Preview Section -->
   <section class="preview">
