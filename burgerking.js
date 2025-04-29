@@ -15,10 +15,6 @@ const logos = {
     src: "BurgerKing-1969-logo.png",
     description: "Burger King debuted its iconic 'bun sandwich' logo—simple, effective, and instantly recognizable as the brand’s signature."
   },
-  1994: {
-    src: "BurgerKing-1994-logo.png",
-    description: "This cleaner version of the classic bun logo sharpened the colors and type for a fresher, more appetizing look."
-  },
   1999: {
     src: "BurgerKing-1999-logo.png",
     description: "With a blue swoosh and diagonal text, this energetic redesign brought movement and modern flair to the classic bun design."
