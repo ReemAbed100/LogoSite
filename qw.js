@@ -32,12 +32,12 @@ const questions = [
 
     },
     {
-        question: "What color is NOT in the Google logo?",
+        question: "When was Nike’s famous logo created?",
         answers: [
-            { text: "Blue", correct: false },
-            { text: "purple", correct: true },
-            { text: "red", correct: false },
-            { text: "yellow", correct: false },
+            { text: "1984", correct: false },
+            { text: "1971", correct: true },
+            { text: "1988", correct: false },
+            { text: "1999", correct: false },
         ]
     }
 
