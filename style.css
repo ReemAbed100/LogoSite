@@ -75,50 +75,87 @@ a {
 /* Auth Form Section */
 .auth-container {
   background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  transition: box-shadow 0.3s ease;
 }
 
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.auth-container:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-.auth-form input,
-.auth-form button {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.auth-form button {
-  background-color: #004e92;
-  color: white;
-  cursor: pointer;
-}
-.auth-form button:hover {
-  background-color: #003366;
+.auth-container h2 {
+  text-align: center;
+  color: #2D3748;
+  margin-bottom: 20px;
 }
 
 .form-toggle {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
+
 .form-toggle button {
-  padding: 8px 12px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid #5A67D8;
+  border-radius: 6px;
+  color: #5A67D8;
+  font-weight: bold;
   cursor: pointer;
-  background-color: #e2e8f0;
-  border: none;
-  border-radius: 4px;
+  transition: all 0.3s ease;
 }
+
+.form-toggle button.active,
 .form-toggle button:hover {
-  background-color: #cbd5e0;
+  background-color: #5A67D8;
+  color: white;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #CBD5E0;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #5A67D8;
+  outline: none;
+}
+
+.auth-form button {
+  padding: 12px;
+  background-color: #5A67D8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #434190;
+}
+
+#form-message {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 10px;
 }
 
 /* Intro Section */
