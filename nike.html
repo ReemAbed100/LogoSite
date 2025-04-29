@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nike Logo Timeline</title>
+  <link rel="stylesheet" href="timeline.css">
+</head>
+<body>
+  <div class="timeline-container">
+    <h1>Nike Logo Timeline</h1>
+
+    <div class="dots">
+      <span class="dot" data-year="1964" onclick="changeLogo(1964)"></span>
+      <span class="dot" data-year="1971" onclick="changeLogo(1971)"></span>
+      <span class="dot" data-year="1978" onclick="changeLogo(1978)"></span>
+      <span class="dot" data-year="1985" onclick="changeLogo(1985)"></span>
+      <span class="dot" data-year="1995" onclick="changeLogo(1995)"></span>
+    </div>
+
+    <div class="logos">
+      <div class="logo-box">
+        <p id="year" class="year-label">1964</p>
+        <img id="logo" src="Nike-1964-logo.png" alt="Nike Logo" />
+        <p id="description">Nike started as Blue Ribbon Sports in 1964, using a BRS logo made of interlocking letters with the full name below. Simple, functional, but not very legible by modern standards.</p>
+      </div>
+    </div>
+
+    <a href="gallery.html">Back to Gallery</a>
+
+    <script src="nike.js"></script>
+  </div>
+</body>
+</html>
