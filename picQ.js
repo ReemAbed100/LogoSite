@@ -1,7 +1,7 @@
 const questions = [
     {
-        question: "In what year was the first Apple logo created?",
-        image: "logos/apple.png",
+        question: "Guess The Logo?",
+        image: "burgerking.png",
         answers: [
             { text: "1976", correct: true },
             { text: "1990", correct: false },
@@ -10,8 +10,8 @@ const questions = [
         ]
     },
     {
-        question: "When was Nike’s famous logo created?",
-        image: "logos/nike.png",
+        question: "Guess The Logo?",
+        image: "starbucks.png",
         answers: [
             { text: "1966", correct: false },
             { text: "1977", correct: false },
@@ -20,8 +20,8 @@ const questions = [
         ]
     },
     {
-        question: "When was Samsung’s first logo made?",
-        image: "logos/samsung.png",
+        question: "Guess The Logo?",
+        image: "nike.png",
         answers: [
             { text: "1966", correct: false },
             { text: "1937", correct: false },
@@ -30,8 +30,8 @@ const questions = [
         ]
     },
     {
-        question: "What color is NOT in the Google logo?",
-        image: "logos/google.png",
+        question: "Guess The Logo?",
+        image: "apple.png",
         answers: [
             { text: "Blue", correct: false },
             { text: "Purple", correct: true },
@@ -103,7 +103,7 @@ function selectAnswer(e) {
         button.disabled = true;
     });
 
-    logoImage.classList.remove("blurred"); // Unblur on answer selection
+    logoImage.classList.remove("blurred");
     nextButton.style.display = "block";
 }
 
