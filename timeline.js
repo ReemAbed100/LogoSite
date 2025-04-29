@@ -1,3 +1,9 @@
+// Preload all logo images
+Object.values(logos).forEach(logo => {
+  const img = new Image();
+  img.src = logo.src;
+});
+
 const logos = {
   1976: {
     src: "Apple-1976-logo.png",
