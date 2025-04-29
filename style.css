@@ -85,9 +85,9 @@ a {
 .form-toggle button {
   padding: 8px 16px;
   background-color: transparent;
-  border: 2px solid #5A67D8;
+  border: 2px solid #8A897C;
   border-radius: 6px;
-  color: #5A67D8;
+  color: #8A897C;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -95,7 +95,7 @@ a {
 
 .form-toggle button.active,
 .form-toggle button:hover {
-  background-color: #5A67D8;
+  background-color: #8A897C;
   color: white;
 }
 
@@ -114,13 +114,13 @@ a {
 }
 
 .auth-form input:focus {
-  border-color: #5A67D8;
+  border-color: #8A897C;
   outline: none;
 }
 
 .auth-form button {
   padding: 12px;
-  background-color: #5A67D8;
+  background-color: #8A897C;
   color: white;
   font-weight: bold;
   border: none;
@@ -131,7 +131,7 @@ a {
 }
 
 .auth-form button:hover {
-  background-color: #434190;
+  background-color: #8A897C;
 }
 
 #form-message {
