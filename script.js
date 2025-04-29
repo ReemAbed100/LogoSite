@@ -1,72 +1,56 @@
-// script.js
+// Toggle between Login and Signup form
+const toggleSignupButton = document.querySelector('.toggle-signup');
+const toggleForgotButton = document.querySelector('.toggle-forgot');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const formTitle = document.getElementById("form-title");
-  const loginBtn = document.getElementById("login-toggle");
-  const registerBtn = document.getElementById("register-toggle");
-  const submitBtn = document.getElementById("submit-btn");
-  const nameField = document.getElementById("name-field");
-  const emailField = document.getElementById("email-field");
-  const passwordField = document.getElementById("password-field");
-  const messageBox = document.getElementById("form-message");
+// Form toggle function
+function toggleFormView() {
+  const formContainer = document.querySelector('.auth-container');
+  const formTitle = formContainer.querySelector('h2');
 
-  let isLogin = true;
-
-  // Toggle Forms
-  loginBtn.addEventListener("click", () => {
-    isLogin = true;
+  if (formTitle.textContent === "Login") {
+    formTitle.textContent = "Sign Up";
+    // Change form input fields for Sign Up (example)
+    formContainer.querySelector('input[type="email"]').placeholder = "Enter your email";
+    formContainer.querySelector('input[type="password"]').placeholder = "Create a password";
+  } else {
     formTitle.textContent = "Login";
-    nameField.style.display = "none";
-    loginBtn.classList.add("active");
-    registerBtn.classList.remove("active");
-    messageBox.textContent = "";
-  });
-
-  registerBtn.addEventListener("click", () => {
-    isLogin = false;
-    formTitle.textContent = "Register";
-    nameField.style.display = "block";
-    registerBtn.classList.add("active");
-    loginBtn.classList.remove("active");
-    messageBox.textContent = "";
-  });
-
-  // Submit Form
-  submitBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const name = nameField.value.trim();
-    const email = emailField.value.trim();
-    const password = passwordField.value;
-
-    if (!email || !password || (!isLogin && !name)) {
-      messageBox.textContent = "Please fill in all required fields.";
-      messageBox.style.color = "red";
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      messageBox.textContent = "Please enter a valid email.";
-      messageBox.style.color = "red";
-      return;
-    }
-
-    // Simulate success
-    if (isLogin) {
-      messageBox.textContent = `Welcome back, ${email}!`;
-    } else {
-      messageBox.textContent = `Account created for ${name}.`;
-    }
-    messageBox.style.color = "green";
-
-    // Reset fields
-    if (!isLogin) nameField.value = "";
-    emailField.value = "";
-    passwordField.value = "";
-  });
-
-  function validateEmail(email) {
-    // Basic email regex
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    // Reset form input fields for Login (example)
+    formContainer.querySelector('input[type="email"]').placeholder = "Email";
+    formContainer.querySelector('input[type="password"]').placeholder = "Password";
   }
+}
+
+// Event listeners for toggling forms
+toggleSignupButton.addEventListener('click', () => {
+  toggleFormView();
+  toggleSignupButton.classList.toggle('active');
+  toggleForgotButton.classList.remove('active');
+});
+
+toggleForgotButton.addEventListener('click', () => {
+  toggleFormView();
+  toggleForgotButton.classList.toggle('active');
+  toggleSignupButton.classList.remove('active');
+});
+
+// Form Validation (Simple)
+const loginForm = document.querySelector('.auth-form');
+
+loginForm.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent form submission
+
+  const emailInput = loginForm.querySelector('input[type="email"]');
+  const passwordInput = loginForm.querySelector('input[type="password"]');
+
+  // Simple Validation
+  if (!emailInput.value || !passwordInput.value) {
+    alert("Both fields are required!");
+    return;
+  }
+
+  // Simulating a successful login for now (you can replace with actual API call)
+  alert("Logged in successfully!");
+  // Reset form fields
+  emailInput.value = '';
+  passwordInput.value = '';
 });
