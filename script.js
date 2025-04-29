@@ -1,64 +1,72 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const formToggleButtons = document.querySelectorAll(".form-toggle button");
-  const authForm = document.querySelector(".auth-form");
+// script.js
 
-  let isLogin = true; // Default form mode
+document.addEventListener("DOMContentLoaded", () => {
+  const formTitle = document.getElementById("form-title");
+  const loginBtn = document.getElementById("login-toggle");
+  const registerBtn = document.getElementById("register-toggle");
+  const submitBtn = document.getElementById("submit-btn");
+  const nameField = document.getElementById("name-field");
+  const emailField = document.getElementById("email-field");
+  const passwordField = document.getElementById("password-field");
+  const messageBox = document.getElementById("form-message");
 
-  // Switch between Login and Signup forms
-  formToggleButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      isLogin = button.textContent.toLowerCase() === "login";
-      renderForm();
-    });
+  let isLogin = true;
+
+  // Toggle Forms
+  loginBtn.addEventListener("click", () => {
+    isLogin = true;
+    formTitle.textContent = "Login";
+    nameField.style.display = "none";
+    loginBtn.classList.add("active");
+    registerBtn.classList.remove("active");
+    messageBox.textContent = "";
   });
 
-  function renderForm() {
-    authForm.innerHTML = `
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Password" required />
-      ${!isLogin ? '<input type="password" placeholder="Confirm Password" required />' : ''}
-      <button type="submit">${isLogin ? "Login" : "Sign Up"}</button>
-    `;
-  }
+  registerBtn.addEventListener("click", () => {
+    isLogin = false;
+    formTitle.textContent = "Register";
+    nameField.style.display = "block";
+    registerBtn.classList.add("active");
+    loginBtn.classList.remove("active");
+    messageBox.textContent = "";
+  });
 
-  // Initial render
-  renderForm();
-
-  // Handle form submission
-  authForm.addEventListener("submit", function (e) {
+  // Submit Form
+  submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    const inputs = authForm.querySelectorAll("input");
-    let valid = true;
 
-    inputs.forEach((input) => {
-      if (!input.value.trim()) {
-        input.style.borderColor = "red";
-        valid = false;
-      } else {
-        input.style.borderColor = "#ccc";
-      }
-    });
+    const name = nameField.value.trim();
+    const email = emailField.value.trim();
+    const password = passwordField.value;
 
-    if (!valid) {
-      alert("Please fill in all fields.");
+    if (!email || !password || (!isLogin && !name)) {
+      messageBox.textContent = "Please fill in all required fields.";
+      messageBox.style.color = "red";
       return;
     }
 
-    const email = inputs[0].value;
-    const password = inputs[1].value;
-    const confirmPassword = inputs[2] ? inputs[2].value : null;
-
-    if (!isLogin && password !== confirmPassword) {
-      alert("Passwords do not match.");
+    if (!validateEmail(email)) {
+      messageBox.textContent = "Please enter a valid email.";
+      messageBox.style.color = "red";
       return;
     }
- 
-    console.log(isLogin ? "Logging in..." : "Signing up...");
-    console.log("Email:", email);
-    console.log("Password:", password);
 
-    // Placeholder for real API call
-    alert(isLogin ? "Login successful!" : "Signup successful!");
-    authForm.reset();
+    // Simulate success
+    if (isLogin) {
+      messageBox.textContent = `Welcome back, ${email}!`;
+    } else {
+      messageBox.textContent = `Account created for ${name}.`;
+    }
+    messageBox.style.color = "green";
+
+    // Reset fields
+    if (!isLogin) nameField.value = "";
+    emailField.value = "";
+    passwordField.value = "";
   });
+
+  function validateEmail(email) {
+    // Basic email regex
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
 });
