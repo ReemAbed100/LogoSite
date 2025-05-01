@@ -1,4 +1,4 @@
-// Define the logos object first
+
 const logos = {
   1976: {
     src: "Apple-1976-logo.png",
@@ -26,7 +26,7 @@ const logos = {
   },
 };
 
-// Preload all logo images
+
 Object.values(logos).forEach(logo => {
   const img = new Image();
   img.src = logo.src;
@@ -37,11 +37,10 @@ function changeLogo(year) {
   const desc = document.getElementById("description");
   const yearText = document.getElementById("year");
 
-  // Fade out image first
+
   logoImg.style.transition = "opacity 0.5s";
   logoImg.style.opacity = 0;
 
-  // After fade out, change image and fade in
   setTimeout(() => {
     logoImg.src = logos[year].src;
     desc.textContent = logos[year].description;
